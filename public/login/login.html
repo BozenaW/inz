@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../stylesheets/login.css"/>
 
-<div class="container">
+
+<div class="container" ng-controller="loginCtrl">
     <div class="row">
         <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-3">
             <div id="iosBlurBg">
@@ -16,15 +17,15 @@
                 </div>
                 <form>
                     <div class="col-3">
-                        <input class="effect-2" type="text" placeholder="Login...">
+                        <input class="effect-2" type="text" placeholder="Login..." id="username" ng-model="username">
                         <span class="focus-border"></span>
 
-                        <input class="effect-2" type="password" placeholder="Password...">
+                        <input class="effect-2" type="password" placeholder="Password..." id="password" ng-model="password">
                         <span class="focus-border"></span>
                     </div>
 
-                    <div class="forget">
-                        <button class="btn btn-default btn-sm">FORGOT PASSWORD?</button>
+                    <div class="log-in">
+                        <button class="btn btn-default btn-sm" ng-click="submit()">LOG IN</button>
                     </div>
 
                 </form>
@@ -38,4 +39,6 @@
         </div>
     </div>
 </div>
+
+
 

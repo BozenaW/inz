@@ -4,17 +4,23 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
     $routeProvider
 
             .when('/test', {
-                template: '<test></test>'
+                resolve: {
+                    "check": function ($location, $rootScope) {
+                        if(!$rootScope.loggedIn) {
+                            $location.path('/login');
+                        }
+                    }
+                },
+                templateUrl: '../views/test.html'
             })
 
             .when('/method', {
-                template: '<method></method>'
+                templateUrl: '../views/method.html'
             })
             .when('/login', {
-                template: '<login></login>'
+                templateUrl: '../login/login.html'
             });
-
-    // .otherwise({
-    //     template: '<categories></categories>'
-    // });
+            // .otherwise({
+            //     redirectTo: '/'
+            // });
 });
