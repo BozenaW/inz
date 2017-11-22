@@ -15,16 +15,6 @@ router.get('/', function(req, res, next) {
 });
 
 
-// router.get('/test', function(req, res, next) {
-//   res.render('test', { title: 'Express' });
-// });
-
-
-// router.get('/test', function (req,res) {
-//
-// });
-
-
 router.get('/method', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
@@ -35,30 +25,35 @@ router.get('/login', function (req,res) {
 
 router.get('/test', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
-  // db.word.find(function (err, word)
-  // {
-  //     res.json(word);
-  // });
 });
 
 
-router.post('/login', function (req, res) {
+// router.get('/login', function (req,res) {
+//   db.word.find(function (err, word)
+//   {
+//      res.json(word);
+//
+//   });
+// });
+
+router.post('/api/login', function (req,res) {
+  console.log(req.body);
   var username = req.body.username;
   var password = req.body.password;
-
-  User.findOne({username:username, password: password}, function (err, user) {
+  db.users.findOne({login:username, password:password}, function (err, user) {
     if(err){
       console.log(err);
       return  res.status(500).send();
     }
-
-    if(!user){
-      return res.status(404).send();
+    else if (user){
+      res.send({status: 'Success'})
     }
-
-    return res.status(200).send();
-
-  });
+    else{
+      res.send({status: 'fail'});
+    }
+  })
 });
+
+
 
 module.exports = router;

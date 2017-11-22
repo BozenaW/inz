@@ -1,14 +1,37 @@
-app.controller('loginCtrl', function ($scope, $location, $rootScope) {
-    $scope.submit = function (){
-        var uname = $scope.username;
-        var password = $scope.password;
+app.controller('loginCtrl', function ($scope, $location, $rootScope, $http, $timeout) {
 
-        if($scope.username == 'admin' && $scope.password == 'admin'){
-            $rootScope.loggedIn = true;
-            $location.path('/test');
-        }
-        else{
-            alert('wrong stuff');
-        }
+    $scope.user = {};
+
+    $scope.submit = function (){
+
+        $http.post('/api/login', $scope.user).then(function (data)
+        {
+            $scope.status = data.data;
+            //console.log($scope.status);
+
+        });
+
+        $timeout(function ()
+        {
+            if($scope.status.status == 'Success'){
+                console.log($scope.status.status);
+                $location.path('/');
+            }
+            else{
+                console.log('wrong data');
+            }
+        },2500);
+
+
     };
+
+
+
+    //});
+
+    // $http.get('/login').then(function (data)
+    // {
+    //     $scope.words = data;
+    //     console.log($scope.words);
+    // })
 });
