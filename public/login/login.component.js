@@ -1,6 +1,5 @@
-
 angular.module('app')
         .component('login',{
-            templateUrl: 'views/login.html',
+            templateUrl: 'login/login.html',
             controller: 'loginCtrl'
         });

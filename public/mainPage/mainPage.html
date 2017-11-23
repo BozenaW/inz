@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="../stylesheets/mainPage.css"/>
+
+
+<div class="container-fluid" ng-controller="categoryCtrl">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">IT</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>-->
+                <li><a ng-href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <!--<a ng-href='' ng-click="showLogin()"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>-->
+                <button ng-click="showLogin()"><a ng-href="/">fghgfd</a></button>
+                <!--<li><a ng-href="/logout" target="_self"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="mainView">
+<div class=" row title1">
+    <h2><span class="awesome-word">select category</span> </h2>
+    <div class="underline"></div>
+</div>
+<div class="row gallery-section">
+
+    <div class="col-md-8 col-md-offset-2 col-sm-12">
+
+        <div class="col-md-4"><div class="category"><span class="name-cat">Information Technology</span></div><img src="../images/cat1.jpg" ng-click="selectCategory()"/></div>
+        <div class="col-md-4"><div class="category"><span class="name-cat">How well you know Computer ?</span></div><img src="../images/cat3.jpg" ng-click="selectCategory()"/></div>
+        <div class="col-md-4"><div class="category"><span class="name-cat">Computer Networks</span></div><img src="../images/cat7.jpg" ng-click="selectCategory()"/></div>
+    </div>
+    <div class="col-md-offset-2"></div>
+</div>
+<div class="row gallery-section">
+    <div class="col-md-8 col-md-offset-2  col-sm-12">
+        <div class="col-md-4"><div class="category"><span class="name-cat">Software Testing</span></div><img src="../images/cat11.jpg" ng-click="selectCategory()"/></div>
+        <div class="col-md-4"><div class="category"><span class="name-cat">Databases</span></div><img src="../images/cat10.jpg" ng-click="selectCategory()"/></div>
+        <div class="col-md-4"><div class="category"><span class="name-cat">Business Intelligence</span></div><img src="../images/cat9.jpg" ng-click="selectCategory()"/></div>
+    </div>
+    <div class="col-md-offset-2"></div>
+</div>
+    </div>
+
+    <login ng-show="loginPage" class="position"></login>
+</div>
+

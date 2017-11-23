@@ -27,6 +27,15 @@ router.get('/test', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
+router.get('/register', function (req,res) {
+  res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+});
+
+router.get('/category', function (req,res) {
+  res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+});
+
+
 
 // router.get('/login', function (req,res) {
 //   db.word.find(function (err, word)
@@ -46,10 +55,25 @@ router.post('/api/login', function (req,res) {
       return  res.status(500).send();
     }
     else if (user){
-      res.send({status: 'Success'})
+      res.send({status: 'Success'});
     }
     else{
       res.send({status: 'fail'});
+    }
+  })
+});
+
+router.post('/api/register', function (req, res) {
+  console.log(req.body);
+  var username = req.body.username;
+  var password = req.body.password;
+  db.users.findOne({login:username}, function (err, user) {
+    if(user){
+      res.send({status: 'Fail'});
+    }
+    else{
+      res.send({status: 'Success'});
+      db.users.insert({login:username, password:password})
     }
   })
 });
