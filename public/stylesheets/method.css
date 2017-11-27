@@ -1,0 +1,133 @@
+.method{
+    width:150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+.method img {
+    width: 30px;
+    position: absolute;
+    z-index: -100;
+}
+#met1{
+    border: 3px solid  #F3E72F;
+    position: absolute;
+    left:50%;
+    top: 5%;
+    transform: translate(-70%,-5%);
+}
+
+#met1:hover{
+    background-color: #fffc94;
+
+}
+#met1 img{
+    left:50%;
+    top: 101.5%;
+    transform: translateX(-50%);
+
+}
+
+#met2{
+    border: 3px solid #5BC15E;
+    position: absolute;
+    left:24%;
+    top: 40%;
+    transform: translate(-20%,-40%);
+}
+#met2:hover{
+    background-color: #a5ffa9;
+
+}
+#met2 img{
+    left:101%;
+    top: 50%;
+    /*-webkit-transform: rotate(280deg);     !* Chrome and other webkit browsers *!*/
+    /*-moz-transform: rotate(280deg);        !* FF *!*/
+    /*--transform: rotate(280deg);          !* Opera *!*/
+    /*-ms-transform: rotate(280deg);         !* IE9 *!*/
+    transform: rotate(280deg)
+}
+
+#met3{
+    border: 3px solid #FA8A04;
+    position: absolute;
+    right:24%;
+    top: 40%;
+    transform: translate(-20%,-40%);
+}
+
+#met3:hover{
+    background-color: #fac066;
+
+}
+
+#met3 img{
+    right:101%;
+    top: 50%;
+    transform: rotate(80deg);
+}
+
+
+
+#met4{
+    border: 3px solid #4A318D;
+    position: absolute;
+    left:33%;
+    top: 80%;
+    transform: translate(-20%,-40%);
+}
+
+#met4:hover{
+    background-color: #a59bff;
+
+}
+
+#met4 img{
+    bottom:98%;
+    left:60%;
+    transform: rotate(200deg);
+}
+
+#met5{
+    border: 3px solid #CB248D;
+    position: absolute;
+    right:33%;
+    top: 80%;
+    transform: translate(-20%,-40%);
+}
+
+#met5:hover{
+    background-color: #c67eb5;
+
+}
+
+#met5 img{
+    bottom:98%;
+    right: 60%;
+    transform: rotate(160deg);
+}
+
+#idea{
+    position: absolute;
+    width:300px;
+    left: 50%;
+    top:50%;
+    transform: translate(-59%,-40%);
+}
+
+.name-method{
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 15px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    text-align: center;
+}
+
+.my-pos{
+    margin-top: 20px;
+}

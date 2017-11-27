@@ -31,11 +31,29 @@ router.get('/register', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
-router.get('/category', function (req,res) {
+router.get('/method', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
-
+router.get('/method/*', function (req,res) {
+  res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+});
+//
+// router.get('/method/2', function (req,res) {
+//   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+// });
+//
+// router.get('/method/3', function (req,res) {
+//   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+// });
+//
+// router.get('/method/4', function (req,res) {
+//   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+// });
+//
+// router.get('/method/5', function (req,res) {
+//   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+// });
 
 // router.get('/login', function (req,res) {
 //   db.word.find(function (err, word)
@@ -78,6 +96,14 @@ router.post('/api/register', function (req, res) {
   })
 });
 
+router.get('/api/met1', function (req, res) {
+
+  db.word.findOne({"type":"fruit" },function (err, fruit)
+  {
+    console.log(err);
+    console.log(fruit);
+  });
+});
 
 
 module.exports = router;

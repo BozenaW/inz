@@ -7,9 +7,6 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
                 templateUrl: '../mainPage/mainPage.html'
             })
 
-            .when('/method', {
-                templateUrl: '../views/method.html'
-            })
             .when('/login', {
                 templateUrl: '../mainPage/mainPage.html',
                 template: '<login></login>'
@@ -18,8 +15,23 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
             .when('/register', {
                 templateUrl: '../register/register.html'
             })
-            .when('/category', {
-                templateUrl: '../category/category.html'
+            .when('/method', {
+                templateUrl: '../methods/method.html'
+            })
+            .when('/method/1', {
+                templateUrl: '../methods/met1.html'
+            })
+            .when('/method/2', {
+                templateUrl: '../methods/met2.html'
+            })
+            .when('/method/3', {
+                templateUrl: '../methods/met3.html'
+            })
+            .when('/method/4', {
+                templateUrl: '../methods/met4.html'
+            })
+            .when('/method/5', {
+                templateUrl: '../methods/met5.html'
             });
 
             // .otherwise({
