@@ -9,21 +9,30 @@ app.controller('met1Ctrl', function ($scope, $http)
     });
 
     $scope.getWord = function (elem, val) {
-        console.log(elem);
+
         if(elem.target.classList.contains('keyBox')) {
-            console.log(elem.target.classList.contains('keyBox'));
+           // console.log(elem.target.classList.contains('keyBox'));
             $scope.key = val;
-            console.log($scope.key);
+            //console.log($scope.key);
         }
         else{
-            console.log(elem.target.classList.contains('keyBox'));
+           // console.log(elem.target.classList.contains('keyBox'));
             $scope.value = val;
-            console.log($scope.value);
         }
-        // else if($('#valueBox').click()){
-        //     $scope.value = val;
-        //     console.log('valueBox clicked');
-        // }
+
+
+        if($scope.words[$scope.key].trans == $scope.value ){
+            console.log('ok');
+           // elem.target.classList.fadeOut(1000);
+
+
+
+        }
+        else{
+            console.log('nieok');
+
+        }
+
     };
 
 
