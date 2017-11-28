@@ -20,10 +20,7 @@ app.controller('methodCtrl', function ($scope, $location) {
         $location.path('/method/5');
     };
 
-    $scope.words = function (){
-        $http.post('/api/met1', $scope.user).then(function (data) {
-            $scope.data = data.data;
-        })};
+
 
 });
 
