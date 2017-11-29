@@ -97,17 +97,10 @@ router.post('/api/register', function (req, res) {
 });
 
 router.get('/api/met1', function (req, res) {
-
-  // db.word.findOne({"type":"fruit" },function (err, fruit)
-  // {
-  //   console.log(err);
-  //   console.log(fruit);
-  // });
-
-  db.word.findOne(function (err, docs){
-    res.json(docs);
-  });
-
+    db.word.findOne(function (err, docs){
+      console.log(docs);
+      res.json(docs);
+    });
 });
 
 
