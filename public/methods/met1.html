@@ -5,7 +5,7 @@
     <h3>Dopasuj, klikając na odowiednie słówka:</h3>
     <div class="row" ng-repeat="(key,value) in words ">
         <div  class="col-xs-6 box keyBox word" ng-click="getWord($event, key)">{{key}}  </div>
-        <div class="col-xs-6 box valueBox word" ng-click="getWord($event, value.trans)">{{value.trans}}</div>
+        <div ng-class="getRandomClass()" class="col-xs-6 box valueBox word" ng-click="getWord($event, value.trans)">{{value.trans}}</div>
 
     </div>
     <!--<h3>Poprawnych odpowiedzi: 5 / 10</h3>-->

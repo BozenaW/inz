@@ -27,29 +27,31 @@ app.controller('met1Ctrl', function ($scope, $http) {
             if($scope.key !== '' && $scope.value !== ''){
                 if($scope.words[$scope.key].trans === $scope.value ){
                     console.log('ok');
-
                     elem.target.classList.add('hid');
                     prev.target.classList.add('hid');
-
                 }
 
                 else{
                     console.log('nieok');
                     elem.target.classList.add('red');
                     prev.target.classList.add('red');
-
                 }
-
             }
-
-
             count=0;
             $scope.key='';
             $scope.value='';
-
         }
-
-
     };
 
+
+    $scope.getRandomClass = function () {
+         var array=[];
+         for(var key in $scope.words){
+             array.push($scope.words[key].trans)
+         }
+         console.log(array);
+         console.log(Math.floor(Math.random() * array.length));
+         //Math.floor(Math.random() * array);
+        //console.log($scope.value);
+    };
 });
