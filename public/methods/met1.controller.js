@@ -1,4 +1,5 @@
-app.controller('met1Ctrl', function ($scope, $http) {
+app.controller('met1Ctrl', function ($scope, $http, $timeout) {
+    $scope.arrayKey = [];
 
     $http.get('/api/met1').then(function (data) {
         $scope.words = data.data.words;
@@ -21,14 +22,20 @@ app.controller('met1Ctrl', function ($scope, $http) {
 
         if(count === 1 ){
             prev = elem;
+            prev.target.classList.add('xxx');
         }
 
         if(count === 2){
             if($scope.key !== '' && $scope.value !== ''){
                 if($scope.words[$scope.key].trans === $scope.value ){
                     console.log('ok');
-                    elem.target.classList.add('hid');
-                    prev.target.classList.add('hid');
+
+                    elem.target.classList.add('xxx');
+                    // $timeout(function ()
+                    // {
+                        elem.target.classList.add('hid');
+                        prev.target.classList.add('hid');
+                    // },1000);
                 }
 
                 else{
@@ -44,14 +51,16 @@ app.controller('met1Ctrl', function ($scope, $http) {
     };
 
 
-    $scope.getRandomClass = function () {
-         var array=[];
-         for(var key in $scope.words){
-             array.push($scope.words[key].trans)
-         }
-         console.log(array);
-         console.log(Math.floor(Math.random() * array.length));
-         //Math.floor(Math.random() * array);
-        //console.log($scope.value);
-    };
+
+        $scope.myRandom = function () {
+
+            $scope.array=[];
+
+            for(var key in $scope.words){
+                $scope.array.push(key);
+            }
+            $scope.array.sort();
+            console.log($scope.array);
+
+        };
 });
