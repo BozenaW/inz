@@ -7,7 +7,9 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
 
     var count = 0;
     var prev;
+    $scope.trueAnswers=0;
     $scope.limit = 2;
+
 
     $scope.getWord = function (elem, val) {
 
@@ -29,7 +31,7 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
             if($scope.key !== '' && $scope.value !== ''){
                 if($scope.words[$scope.key].trans === $scope.value ){
                     console.log('ok');
-
+                    $scope.trueAnswers +=250;
                     elem.target.classList.add('xxx');
                     // $timeout(function ()
                     // {
@@ -39,9 +41,15 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
                 }
 
                 else{
+                    $scope.trueAnswers-=100;
                     console.log('nieok');
                     elem.target.classList.add('red');
                     prev.target.classList.add('red');
+                    $timeout(function ()
+                    {
+                        elem.target.classList.remove('red');
+                        prev.target.classList.remove('red');
+                    },800);
                 }
             }
             count=0;

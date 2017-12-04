@@ -19,22 +19,22 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
                 templateUrl: '../methods/method.html'
             })
             .when('/method/1', {
-                templateUrl: '../methods/met1.html'
+                templateUrl: '../methods/met1/met1.html'
             })
             .when('/method/2', {
                 templateUrl: '../methods/met2.html'
             })
             .when('/method/3', {
-                templateUrl: '../methods/met3.html'
+                templateUrl: '../methods/met3/met3.html'
             })
             .when('/method/4', {
                 templateUrl: '../methods/met4.html'
             })
             .when('/method/5', {
                 templateUrl: '../methods/met5.html'
-            });
+            })
 
-            // .otherwise({
-            //     redirectTo: '/'
-            // });
+            .otherwise({
+                redirectTo: '/'
+            });
 });

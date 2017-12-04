@@ -19,9 +19,5 @@ app.controller('registerCtrl', function ($scope, $location, $rootScope, $http, $
                 console.log('wrong data');
             }
         },2500);
-
     };
-
-
-
 });

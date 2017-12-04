@@ -23,11 +23,12 @@ router.get('/login', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
-router.get('/test', function (req,res) {
+router.get('/register', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
-router.get('/register', function (req,res) {
+
+router.get('/test', function (req,res) {
   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 });
 
@@ -43,10 +44,10 @@ router.get('/method/*', function (req,res) {
 //   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 // });
 //
-// router.get('/method/3', function (req,res) {
-//   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
-// });
-//
+router.get('/method/3', function (req,res) {
+  res.sendFile(path.join(__dirname, '../public/', 'index.html'));
+});
+
 // router.get('/method/4', function (req,res) {
 //   res.sendFile(path.join(__dirname, '../public/', 'index.html'));
 // });
