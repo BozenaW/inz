@@ -86,13 +86,15 @@ router.post('/api/register', function (req, res) {
   console.log(req.body);
   var username = req.body.username;
   var password = req.body.password;
+
+
   db.users.findOne({login:username}, function (err, user) {
     if(user){
       res.send({status: 'Fail'});
     }
     else{
       res.send({status: 'Success'});
-      db.users.insert({login:username, password:password})
+      db.users.insert(req.body)
     }
   })
 });

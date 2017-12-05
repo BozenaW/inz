@@ -40,13 +40,16 @@ a:hover { text-decoration: none }
 
 
 
-.search-box{margin:80px auto;position:absolute;}
+.search-box{
+    margin:80px auto;
+
+}
 .caption{margin-bottom:50px;}
 .loginForm input[type=text], .loginForm input[type=password]{
     margin-bottom:10px;
 }
 .loginForm input[type=submit]{
-    background:#fb044a;
+    background:#15224a;
     color:#fff;
     font-weight:700;
 
@@ -106,4 +109,100 @@ a:hover { text-decoration: none }
 }
 #pswd_info {
     display:none;
+}
+
+#trueOrFalse{
+    font-size: 30px;
+    position:absolute;
+    left:105%;
+    width:45px;
+    height:45px;
+}
+
+
+#boxRegister{
+    margin-top:50px;
+    width:500px;
+    height: 500px;
+    background-color: rgba(69,138,182,0.4);
+}
+
+#boxRegister input{
+    width: 100%;
+}
+
+
+
+/*///////////////////////////////////////////////////////////*/
+
+
+.btn {
+    height: 80px;
+    margin-top:50px;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 10px;
+    color: #FFF;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-sign-in {
+    color:white;
+    background:#15224a;
+    width: 96%;
+
+    height: 60px;
+    outline: none!important;
+}
+.btn-sign-in:hover {
+    background: #223879;
+    color:white;
+}
+
+.loading {
+    width: 60px;
+}
+
+
+
+
+@-webkit-keyframes rotate-forever {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-forever {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+.loading-spinner {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: rotate-forever;
+    animation-name: rotate-forever;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #ffffff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
 }

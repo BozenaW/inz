@@ -12,21 +12,21 @@
                         <li data-target="#myCarousel" data- slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="item " ng-repeat="item in y" ng-class="{'active':$first}">
+                        <div class="item " ng-repeat="item in array" ng-class="{'active':$first}">
                             <div class="row-fluid myflex pos">
-                                <div class="col-xs-6">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{item[0]}}" alt="Image" /></a></div>
+                                <div class="col-xs-6" ng-repeat="x in array" ng-class="{'active':$first}">
+                                    <div class="span3" ><a href="#x" class="thumbnail"><img src={{x}} alt="Image" /></a></div>
                                 </div>
                                 <div class="col-xs-6">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{item[1]}}" alt="Image"/></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src={{array[1]}}  alt="Image"/></a></div>
                                 </div>
                             </div>
                             <div class="row-fluid myflex pos">
                                 <div class="col-xs-6">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{item}}" alt="Image" /></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="../../images/idea2.jpg"  alt="Image" /></a></div>
                                 </div>
                                 <div class="col-xs-6">
-                                    <div class="span3"><a href="#x" class="thumbnail"><img src="{{item}}" alt="Image"/></a></div>
+                                    <div class="span3"><a href="#x" class="thumbnail"><img src="../../images/idea2.jpg"  alt="Image"/></a></div>
                                 </div>
                             </div>
                         </div>
