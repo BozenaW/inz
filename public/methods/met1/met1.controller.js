@@ -58,17 +58,22 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
         }
     };
 
+    $scope.arrayKey=[];
+    $scope.arrayValue=[];
 
 
         $scope.myRandom = function () {
 
-            $scope.array=[];
-
             for(var key in $scope.words){
-                $scope.array.push(key);
+                $scope.arrayKey.push(key);
+                $scope.arrayValue.push($scope.words[key].trans);
             }
-            $scope.array.sort();
-            console.log($scope.array);
+
+            $scope.arrayKey.sort();
+            console.log($scope.arrayKey);
+            console.log($scope.arrayValue);
+
+            //console.log($scope.array[0])
 
         };
 });

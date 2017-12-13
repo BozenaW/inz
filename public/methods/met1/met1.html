@@ -3,12 +3,18 @@
 <div class="container" ng-controller="met1Ctrl">
     <h1><span>Porównaj wyrazy</span></h1>
     <h3>Dopasuj, klikając na odowiednie słówka:</h3>
-    <div class="row" ng-repeat="(key,value) in words ">
-        <div  class="col-xs-6 box keyBox word" ng-click="getWord($event, key)">{{key}}  </div>
-        <div  class="col-xs-6 box valueBox word" ng-click="getWord($event, value.trans)">{{value.trans}}</div>
 
+    <div class="col-md-6">
+        <div  ng-repeat="key in arrayKey ">
+            <div  class="col-xs-6 box keyBox word" ng-click="getWord($event, key)">{{key}}  </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div ng-repeat="val in arrayValue ">
+            <div  class="col-xs-6 box valueBox word" ng-click="getWord($event, val)">{{val}}</div>
+        </div>
     </div>
     <h3>Zdobyte punkty: {{trueAnswers}} / 1500 PKT</h3>
-    <!--<button ng-click="myRandom()">asd</button>-->
+    <button ng-click="myRandom()">asd</button>
 
 </div>

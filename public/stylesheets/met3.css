@@ -59,6 +59,11 @@
 .span3{
     display: flex!important;
     justify-content: center!important;
+
+}
+.span3 img{
+    height: 200px;
+    width:360px;
 }
 
 .thumbnail {
