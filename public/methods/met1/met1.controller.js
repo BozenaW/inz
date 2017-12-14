@@ -3,6 +3,7 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
 
     $http.get('/api/met1').then(function (data) {
         $scope.words = data.data.words;
+        console.log('****', $scope.words);
     });
 
     var count = 0;

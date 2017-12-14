@@ -83,27 +83,39 @@ router.post('/api/login', function (req,res) {
 });
 
 router.post('/api/register', function (req, res) {
-  console.log(req.body);
   var username = req.body.username;
+  var surname = req.body.surname;
   var password = req.body.password;
+  var repeatPass = req.body.repeatP;
 
-
-  db.users.findOne({login:username}, function (err, user) {
-    if(user){
+  db.users.findOne({username:username}, function (err, user) {
+    if(err){
+      return  res.status(500).send();
+    }
+    else if(user){
       res.send({status: 'Fail'});
+      console.log('jest user')
     }
     else{
       res.send({status: 'Success'});
-      db.users.insert(req.body)
+      console.log('nie ma usera');
+      db.users.insert(req.body);
     }
   })
 });
 
 router.get('/api/met1', function (req, res) {
-    db.word.findOne(function (err, docs){
-      console.log(docs);
-      res.json(docs);
-    });
+  db.word.findOne(function (err, docs){
+    console.log(docs);
+    res.json(docs);
+  });
+});
+
+router.get('/api/met3', function (req, res) {
+  db.word.findOne(function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+  })
 });
 
 
