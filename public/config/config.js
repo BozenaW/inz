@@ -28,10 +28,10 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
                 templateUrl: '../methods/met3/met3.html'
             })
             .when('/method/4', {
-                templateUrl: '../methods/met4.html'
+                templateUrl: '../methods/met4/met4.html'
             })
             .when('/method/5', {
-                templateUrl: '../methods/met5.html'
+                templateUrl: '../methods/met5/met5.html'
             })
 
             .otherwise({
