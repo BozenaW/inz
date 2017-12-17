@@ -111,6 +111,12 @@ router.get('/api/met1', function (req, res) {
   });
 });
 
+router.get('/api/met2', function (req, res) {
+    db.word.findOne(function (err, docs) {
+        res.json(docs);
+    })
+});
+
 router.get('/api/met3', function (req, res) {
   db.word.findOne(function (err, docs) {
     console.log(docs);

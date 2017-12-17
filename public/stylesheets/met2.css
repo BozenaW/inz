@@ -1,0 +1,47 @@
+.container{
+    margin-top: 100px;
+}
+
+.oneRow li {
+    background: #da9748 none repeat scroll 0 0;
+    border-bottom: 2px solid #e5a253;
+    color: #f1f1f1;
+    font-size: 16px;
+    padding: 15px 24px;
+}
+.oneRow li:hover{
+    background:  #e5a253;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.word:hover{
+    background: #dedede none repeat scroll 0 0;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+
+.features-table {
+    text-align:center;
+    background-color: grey;
+    height: 70px;
+    margin-bottom:0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.no-padding{
+    padding:0;
+}
+
+.word, .TorF{
+    height: 54px;
+    background: #efefef;
+    border-bottom: 2px solid #d4d4d4;
+    border-right: 2px solid #d4d4d4;
+    text-align:center;
+    padding: 14px 21px;
+
+}

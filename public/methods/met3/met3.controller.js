@@ -36,7 +36,7 @@ app.controller('met3Ctrl', function ($scope, $http, $location)
         var rand = Math.floor(Math.random()*$scope.list.length);
         console.log($scope.list[rand]);
         for(var key in $scope.words){
-            if($scope.words[key].img == $scope.list[rand]){
+            if($scope.words[key].img === $scope.list[rand]){
                 console.log(key);
                 $scope.wordName = key;
             }

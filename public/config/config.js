@@ -22,7 +22,7 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
                 templateUrl: '../methods/met1/met1.html'
             })
             .when('/method/2', {
-                templateUrl: '../methods/met2.html'
+                templateUrl: '../methods/met2/met2.html'
             })
             .when('/method/3', {
                 templateUrl: '../methods/met3/met3.html'
