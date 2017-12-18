@@ -7,14 +7,14 @@ body
     font-weight: 700;
 }
 
-#pojemnik
+#box
 {
     width:900px;
     margin-left:auto;
     margin-right:auto;
 }
 
-#plansza
+#board
 {
     width: 900px;
     margin-top: 50px;
@@ -24,7 +24,7 @@ body
     min-height: 60px;
 }
 
-#szubienica
+#gibbet
 {
     float: left;
     width: 450px;
@@ -32,7 +32,7 @@ body
     min-height: 280px;
 }
 
-#alfabet
+#alphabet
 {
     float: left;
     width: 450px;
@@ -40,7 +40,7 @@ body
     min-height: 280px;
 }
 
-.litera
+.letter
 {
     width: 50px;
     height: 50px;
@@ -57,7 +57,7 @@ body
     font-size: 18px;
 }
 
-.litera:hover
+.letter:hover
 {
     background-color: #222222;
     color: white;

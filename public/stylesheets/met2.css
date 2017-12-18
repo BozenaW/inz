@@ -45,3 +45,11 @@
     padding: 14px 21px;
 
 }
+
+.fa-check{
+    color: darkgreen;
+}
+
+.fa-times{
+    color: darkred;
+}

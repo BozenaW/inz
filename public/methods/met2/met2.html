@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="../../stylesheets/met2.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
 
 <div class="container" ng-controller="met2Ctrl">
     <div class="features-table">
@@ -11,13 +9,9 @@
     <div class="oneRow" ng-repeat="obj in array  track by $index">
         <li class="col-sm-8 no-padding">{{obj.def}}</li>
         <div class="col-sm-3 no-padding word">
-
-            <input my-word="myWord" ng-model="arrayWord[$index]" type="text"/>
-
+            <input  ng-model="arrayWord[$index]" type="text"/>
         </div>
-
-        <div id="{{$index}}" class="TorF col-sm-1"></div>
-
+        <div  class="TorF col-sm-1"></div>
     </div>
     <button  ng-click="check()" >check</button>
 </div>

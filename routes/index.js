@@ -124,5 +124,10 @@ router.get('/api/met3', function (req, res) {
   })
 });
 
-
+router.get('/api/met5', function (req, res) {
+  db.word.findOne(function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+  })
+});
 module.exports = router;

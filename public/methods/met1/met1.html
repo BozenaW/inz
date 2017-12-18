@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../../stylesheets/met1.css"/>
 
-<div class="container" ng-controller="met1Ctrl">
+<div class="container" ng-controller="met1Ctrl" ng-init="myRandom()">
     <h1><span>Porównaj wyrazy</span></h1>
     <h3>Dopasuj, klikając na odowiednie słówka:</h3>
 
@@ -15,6 +15,4 @@
         </div>
     </div>
     <h3>Zdobyte punkty: {{trueAnswers}} / 1500 PKT</h3>
-    <button ng-click="myRandom()">asd</button>
-
 </div>

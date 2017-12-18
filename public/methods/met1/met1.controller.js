@@ -4,6 +4,7 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
     $http.get('/api/met1').then(function (data) {
         $scope.words = data.data.words;
         console.log('****', $scope.words);
+        $scope.myRandom();
     });
 
     var count = 0;
@@ -20,7 +21,7 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
             $scope.key = val;
         }
         else{
-            $scope.value = val;
+             $scope.value = val;
         }
 
         if(count === 1 ){
@@ -57,14 +58,16 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
             $scope.key='';
             $scope.value='';
         }
-    };
 
+
+
+    };
     $scope.arrayKey=[];
     $scope.arrayValue=[];
 
 
-        $scope.myRandom = function () {
-
+        $scope.myRandom = function ()
+        {
             for(var key in $scope.words){
                 $scope.arrayKey.push(key);
                 $scope.arrayValue.push($scope.words[key].trans);

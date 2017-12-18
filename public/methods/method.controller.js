@@ -20,7 +20,10 @@ app.controller('methodCtrl', function ($scope, $location) {
         $location.path('/method/5');
     };
 
-
-
+    $scope.makeActive = function (item)
+    {
+        $('.main-nav ul li').removeClass('active');
+        $scope.active = $scope.active == item?'':item;
+    }
 });
 
