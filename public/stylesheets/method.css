@@ -1,138 +1,3 @@
-/*.method{*/
-    /*width:150px;*/
-    /*height: 150px;*/
-
-    /*border-radius: 50%;*/
-/*}*/
-
-/*.method img {*/
-    /*width: 30px;*/
-    /*position: absolute;*/
-    /*z-index: -100;*/
-/*}*/
-/*#met1{*/
-    /*border: 3px solid  #F3E72F;*/
-    /*position: absolute;*/
-    /*left:50%;*/
-    /*top: 5%;*/
-    /*transform: translate(-70%,-5%);*/
-/*}*/
-
-/*#met1:hover{*/
-    /*background-color: #fffc94;*/
-
-/*}*/
-/*#met1 img{*/
-    /*left:50%;*/
-    /*top: 101.5%;*/
-    /*transform: translateX(-50%);*/
-
-/*}*/
-
-/*#met2{*/
-    /*border: 3px solid #5BC15E;*/
-    /*position: absolute;*/
-    /*left:24%;*/
-    /*top: 40%;*/
-    /*transform: translate(-20%,-40%);*/
-/*}*/
-/*#met2:hover{*/
-    /*background-color: #a5ffa9;*/
-
-/*}*/
-/*#met2 img{*/
-    /*left:101%;*/
-    /*top: 50%;*/
-    /*!*-webkit-transform: rotate(280deg);     !* Chrome and other webkit browsers *!*!*/
-    /*!*-moz-transform: rotate(280deg);        !* FF *!*!*/
-    /*!*--transform: rotate(280deg);          !* Opera *!*!*/
-    /*!*-ms-transform: rotate(280deg);         !* IE9 *!*!*/
-    /*transform: rotate(280deg)*/
-/*}*/
-
-/*#met3{*/
-    /*border: 3px solid #FA8A04;*/
-    /*position: absolute;*/
-    /*right:24%;*/
-    /*top: 40%;*/
-    /*transform: translate(-20%,-40%);*/
-/*}*/
-
-/*#met3:hover{*/
-    /*background-color: #fac066;*/
-
-/*}*/
-
-/*#met3 img{*/
-    /*right:101%;*/
-    /*top: 50%;*/
-    /*transform: rotate(80deg);*/
-/*}*/
-
-
-
-/*#met4{*/
-    /*border: 3px solid #4A318D;*/
-    /*position: absolute;*/
-    /*left:33%;*/
-    /*top: 80%;*/
-    /*transform: translate(-20%,-40%);*/
-/*}*/
-
-/*#met4:hover{*/
-    /*background-color: #a59bff;*/
-
-/*}*/
-
-/*#met4 img{*/
-    /*bottom:98%;*/
-    /*left:60%;*/
-    /*transform: rotate(200deg);*/
-/*}*/
-
-/*#met5{*/
-    /*border: 3px solid #CB248D;*/
-    /*position: absolute;*/
-    /*right:33%;*/
-    /*top: 80%;*/
-    /*transform: translate(-20%,-40%);*/
-/*}*/
-
-/*#met5:hover{*/
-    /*background-color: #c67eb5;*/
-
-/*}*/
-
-/*#met5 img{*/
-    /*bottom:98%;*/
-    /*right: 60%;*/
-    /*transform: rotate(160deg);*/
-/*}*/
-
-/*#idea{*/
-    /*position: absolute;*/
-    /*width:300px;*/
-    /*left: 50%;*/
-    /*top:50%;*/
-    /*transform: translate(-59%,-40%);*/
-/*}*/
-
-/*.name-method{*/
-    /*position: absolute;*/
-    /*text-transform: uppercase;*/
-    /*font-size: 15px;*/
-    /*top:50%;*/
-    /*left:50%;*/
-    /*transform: translate(-50%,-50%);*/
-
-    /*text-align: center;*/
-/*}*/
-
-/*.my-pos{*/
-    /*margin-top: 20px;*/
-/*}*/
-
-
 
 * {
     margin: 0;
@@ -145,7 +10,7 @@
 }
 
 html {
-    background: url("http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_52dd4720e8387_1.JPG") no-repeat center center fixed;
+    background: url("../images/cat7.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -203,15 +68,17 @@ header .credits {
     margin: 0 auto;
     text-align: center;
     margin-top: 80px;
+    height:250px;
 }
 .content .caption h1 {
     line-height: 60px;
     font-size: 60px;
-    text-decoration: underline;
+    font-family: 'Permanent Marker', cursive;
     text-transform: uppercase;
     letter-spacing: .2em;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
     margin-bottom: 5px;
+    color:#272e38;
 }
 .content .caption h1:first-of-type {
     letter-spacing: 0;
@@ -222,6 +89,8 @@ header .credits {
     letter-spacing: .4em;
     font-size: 16px;
 }
+
+
 .content nav.main-nav {
     position: fixed;
     bottom: 0;
@@ -237,16 +106,54 @@ header .credits {
     flex-grow: 1;
     text-align: center;
     padding-bottom: 20px;
-    height: 180px;
+    height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 0;
     transition: all .25s ease;
     position: relative;
     border-right: 1px solid #606770;
     box-shadow: 0 5px 0 0 #1a1f27;
 }
+
+.butt {
+    width:50px;
+    height: 30px;
+    /*border-radius: 50%;*/
+    border:none;
+    transition: all .2s ease-in-out;
+    outline: none!important;
+    background-color: #272e38;
+    color:white!important;
+    font-weight: bold;
+}
+
+.butt:hover{
+    transform: scale(1.3);
+
+}
+
+.navbar{
+    background-color: #1a1f27;
+}
+
+
+.myText{
+    width:100%;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform:uppercase;
+    position:absolute;
+    bottom: 10%;
+    left:50%;
+    transform: translate(-50%,-20%);
+}
+
+.active{
+    color:#272e38!important;
+}
+
 .content nav.main-nav ul li:last-of-type {
     border-right: none;
 }

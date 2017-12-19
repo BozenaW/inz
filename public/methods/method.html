@@ -1,154 +1,81 @@
 <link rel="stylesheet" href="../stylesheets/method.css"/>
-
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 <div ng-controller="methodCtrl">
-<!--<div class="method" id="met1"  ng-click="method1()">-->
-    <!--<img src="../images/image_bg.png" alt=""/>-->
-    <!--<span class="name-method">porównaj wyrazy</span>-->
-<!--</div>-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
 
-<!--<img id="idea" src="../images/idea2.jpg" alt=""/>-->
-
-<!--<div class="method" id="met2" ng-click="method2()" >-->
-    <!--<img src="../images/image_bg.png" alt=""/>-->
-    <!--<span class="name-method">dopasuj definicję</span>-->
-<!--</div>-->
-
-<!--<div class="method" id="met3" ng-click="method3()" >-->
-    <!--<img src="../images/image_bg.png" alt=""/>-->
-    <!--<span class="name-method">wybierz obrazek</span>-->
-<!--</div>-->
-
-<!--<div class="method" id="met4" ng-click="method4()" >-->
-    <!--<img src="../images/image_bg.png" alt=""/>-->
-    <!--<span class="name-method">słuchaj i pisz</span>-->
-<!--</div>-->
-
-<!--<div class="method" id="met5" ng-click="method5()" >-->
-    <!--<img src="../images/image_bg.png" alt=""/>-->
-    <!--<span class="name-method">Zagraj w wisielca</span>-->
-<!--</div>-->
-<!--</div>-->
-
-<header>
-    <ul class="breadcrumbs">
-        <li><a href="#">Weather App</a></li>
-        <li><a href="#">Global Outlook</a></li>
-        <li><a href="#">Europe</a></li>
-    </ul>
-
-    <div class="credits">Project/Design by <a href="https://twitter.com/STUDIOJQ">Jonathan Quintin</a> -> <a href="https://dribbble.com/shots/1346874-Weather-Dashboard-Global-Outlook-5?list=users&offset=71">Dribbble</a></div>
-</header>
-
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a ng-href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a ng-href='/' ng-click="showLogin()"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                    <!--<li><a ng-href="/logout" target="_self"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
 <div class="content">
 
     <div class="caption">
-        <h1>A</h1>
-        <h1>Nice</h1>
-        <h1>Headline</h1>
-        <span class="city">Location</span>
-        <span class="country">Country</span>
+
+        <h1>computer networks</h1>
+
     </div>
 
     <nav class="main-nav">
         <ul>
-            <li class="weather" ng-click='makeActive("one")' ng-class="{ 'active': active=='one'}">
-                <div class="menuicon fa fa-bars"></div>
-                <div class="ul-menu">
-                    <p>Settings</p>
-                    <ul>
-                        <li>Option 1</li>
-                        <li>Option 2</li>
-                        <li>Option 3</li>
-                    </ul>
-                    <label>Weather for</label>
-                    <input type="text" name="weatherlocation" placeholder="location" />
-                    <button>Show</button>
-                    <div class="ul-menu-close fa fa-times"></div>
+            <li class="weather" ng-click='makeActive($event, "one")' ng-class="{ 'active': active=='one'}">
+                <div class="icon fa fa-compress fa-4x"></div>
+                <span class="myText">Porównaj wyrazy</span>
+                <div ng-show="myVar">
+                <button  ng-click="method1()" class="butt">GO!</button>
                 </div>
-                <div class="icon fa fa-cloud fa-2x"></div>
-                <span>Weather</span>
             </li>
 
-
-            <li class="gallery active" ng-click='makeActive("two")' ng-class="{ 'active': active=='two'}">
-                <div class="menuicon fa fa-bars"></div>
-                <div class="ul-menu">
-                    <p>Settings</p>
-                    <ul>
-                        <li>Option 1</li>
-                        <li>Option 2</li>
-                        <li>Option 3</li>
-                    </ul>
-                    <input type = "range" min="0" max="100" onchange="rangevalue.value=value"/>
-                    <output id="rangevalue">50</output>
-                    <button>Save Changes</button>
-                    <div class="ul-menu-close fa fa-times"></div>
+            <li class="gallery" ng-click='makeActive($event,"two")' ng-class="{ 'active': active=='two'}">
+                <div class="icon fa fa-list-ul fa-4x"></div>
+                <span class="myText">Dopasuj definicję</span>
+                <div ng-show="myVar2">
+                    <button ng-click="method2()" class="butt">GO!</button>
                 </div>
-                <div class="icon fa fa-photo fa-2x"></div>
-                <span>Gallery</span>
             </li>
 
-
-            <li class="history" ng-click='makeActive("three")' ng-class="{ 'active': active=='three'}">
-                <div class="menuicon fa fa-bars"></div>
-                <div class="ul-menu">
-                    <p>Settings</p>
-                    <ul>
-                        <li>Option 1</li>
-                        <li>Option 2</li>
-                        <li>Option 3</li>
-                    </ul>
-                    <label for="history">Sort by</label>
-                    <input list="history" name="history">
-                    <datalist id="history">
-                        <option value="Name">
-                        <option value="Date">
-                        <option value="Priority">
-                        <option value="Author">
-                        <option value="Category">
-                    </datalist>
-                    <button>Save Changes</button>
-                    <div class="ul-menu-close fa fa-times"></div>
+            <li class="history" ng-click='makeActive($event, "three")' ng-class="{ 'active': active=='three'}">
+            <div style="height:30px">   <div class="icon fa fa-photo fa-2x"></div>   <div class="icon fa fa-photo fa-2x"></div></div>
+            <div>   <div class="icon fa fa-photo fa-2x"></div>   <div class="icon fa fa-photo fa-2x"></div></div>
+                <span class="myText">Wybierz obrazek</span>
+                <div ng-show="myVar3">
+                    <button ng-click="method3()" class="butt">GO!</button>
                 </div>
-                <div class="icon fa fa-align-left fa-2x"></div>
-                <span>History</span>
             </li>
 
-
-            <li class="likes" ng-click='makeActive("four")' ng-class="{ 'active': active=='four'}">
-                <div class="menuicon fa fa-bars"></div>
-                <div class="ul-menu">
-                    <p>Settings</p>
-                    <ul>
-                        <li>Option 1</li>
-                        <li>Option 2</li>
-                        <li>Option 3</li>
-                    </ul>
-                    <button>Show likes</button>
-                    <div class="ul-menu-close fa fa-times"></div>
+            <li class="likes" ng-click='makeActive($event, "four")' ng-class="{ 'active': active=='four'}">
+                <div class="icon fa fa-volume-up fa-4x"></div>
+                <span class="myText">Słuchaj i pisz</span>
+                <div ng-show="myVar4">
+                    <button ng-click="method4()" class="butt">GO!</button>
                 </div>
-                <div class="icon fa fa-heart-o fa-2x"></div>
-                <span>Likes</span>
             </li>
 
-
-            <li class="comments" ng-click='makeActive("five")' ng-class="{ 'active': active=='five'}">
-                <div class="menuicon fa fa-bars"></div>
-                <div class="ul-menu">
-                    <p>Settings</p>
-                    <ul>
-                        <li>Option 1</li>
-                        <li>Option 2</li>
-                        <li>Option 3</li>
-                    </ul>
-                    <button>Show comments</button>
-                    <div class="ul-menu-close fa fa-times"></div>
+            <li class="comments" ng-click='makeActive($event, "five")' ng-class="{ 'active': active=='five'}">
+                <div class="icon"><img src="../images/man.svg" style="width:110px;"  alt=""/></div>
+                <span class="myText">Zagraj w wisielca</span>
+                <div ng-show="myVar5">
+                    <button ng-click="method5()" class="butt">GO!</button>
                 </div>
-                <div class="icon fa fa-comment-o fa-2x"></div>
-                <span>Comments</span>
             </li>
         </ul>
     </nav>
 </div>
 </div>
 
+<script type="text/javascript" src="javascripts/method.js"></script>

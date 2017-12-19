@@ -69,7 +69,9 @@ pre {
     height: 50px;
     background-color:#006666;
 }
-
+.navbar{
+    background-color: #1a1f27;
+}
 .name-cat{
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -79,9 +81,6 @@ pre {
     text-align: center;
 }
 
-.collapse{
-    background-color: dimgrey;
-}
 
 .nav li a{
     color: white!important;
