@@ -7,7 +7,7 @@ var router = express.Router();
 
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords',['word']);
+var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
