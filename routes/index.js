@@ -1,13 +1,15 @@
 var express = require('express');
-var sessions = require('express-session');
+// var session = require('express-session');
 
 
 const path = require('path');
 var router = express.Router();
 
 
+//req.session.Zmienna = null;
+
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords');
+var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords', ['WordsCollection']);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -104,6 +106,14 @@ router.post('/api/register', function (req, res) {
   })
 });
 
+router.get('/api/category', function (req,res) {
+  db.WordsCollection.find(function (err, docs) {
+    console.log(docs);
+    res.json(docs);
+  })
+});
+
+
 router.get('/api/met1', function (req, res) {
   db.word.findOne(function (err, docs){
     console.log(docs);
@@ -112,12 +122,14 @@ router.get('/api/met1', function (req, res) {
 });
 
 router.get('/api/met2', function (req, res) {
+  req.session.test = {name:'test'};
     db.word.findOne(function (err, docs) {
         res.json(docs);
     })
 });
 
 router.get('/api/met3', function (req, res) {
+  console.log(req.session);
   db.word.findOne(function (err, docs) {
     console.log(docs);
     res.json(docs);
