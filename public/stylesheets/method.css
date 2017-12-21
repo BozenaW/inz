@@ -9,9 +9,12 @@
     font-weight: 400;
 }
 
-html {
-    background: url("../images/cat7.jpg") no-repeat center center fixed;
+.tlo{
+    height: 820px;
+
+    background: no-repeat center center fixed;
     background-size: cover;
+    /*background-color: #00b3ee;*/
 }
 
 body {
@@ -64,11 +67,12 @@ header .credits {
     position: relative;
 }
 .content .caption {
+
     width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-top: 80px;
-    height:250px;
+    height:130px;
 }
 .content .caption h1 {
     line-height: 60px;

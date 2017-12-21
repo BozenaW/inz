@@ -33,6 +33,12 @@ angular.module('app').config(function ($routeProvider, $locationProvider)
             .when('/method/5', {
                 templateUrl: '../methods/met5/met5.html'
             })
+            // .when('/method/InformationTechnology/' ,{
+            //     templateUrl:'../methods/method.html'
+            // })
+            // .when('/method/HowwellyouknowComputer?/' ,{
+            //     templateUrl:'../methods/method.html'
+            // })
 
             .otherwise({
                 redirectTo: '/'

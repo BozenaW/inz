@@ -1,12 +1,47 @@
 <link rel="stylesheet" href="../../stylesheets/met2.css"/>
 
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>
+                <li><a ng-href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a ng-href='/' ng-click="showLogin()"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <!--<li><a ng-href="/logout" target="_self"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
 <div class="container" ng-controller="met2Ctrl">
+
+
+    <!--<ul class="doorWords">-->
+        <!--<li><div class="door">1</div></li>-->
+        <!--<li><div class="door">2</div></li>-->
+        <!--<li><div class="door">3</div></li>-->
+        <!--<li><div class="door">4</div></li>-->
+        <!--<li><div class="door">5</div></li>-->
+    <!--</ul>-->
+
+
     <div class="features-table">
         <h1 class="col-sm-8"> Definition </h1>
         <h1 class="col-sm-3"> Word </h1>
         <h1 class="col-sm-1"> T/F </h1>
     </div>
-    <div class="oneRow" ng-repeat="obj in array  track by $index">
+    <div class="oneRow" ng-repeat="obj in array  | limitTo:limit  track by $index">
         <li class="col-sm-8 no-padding">{{obj.def}}</li>
         <div class="col-sm-3 no-padding word">
             <input  ng-model="arrayWord[$index]" type="text"/>
@@ -17,4 +52,4 @@
 </div>
 
 
-
+<script type="text/javascript" src="../javascripts/met2door.js"></script>
