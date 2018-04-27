@@ -1,18 +1,41 @@
 <link rel="stylesheet" href="../../stylesheets/met1.css"/>
+<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Home</a>
+        </div>
 
-<div class="container" ng-controller="met1Ctrl" ng-init="myRandom()">
-    <h1><span>Porównaj wyrazy</span></h1>
-    <h3>Dopasuj, klikając na odowiednie słówka:</h3>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>-->
+                <!--<li><a ng-href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+                <!--<li><a ng-href='/' ng-click="showLogin()"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>-->
+                <!--<li><a ng-href="/logout" target="_self"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container" ng-controller="met1Ctrl">
+
+    <h3 class="margin">Dopasuj, klikając na odowiednie słówka:</h3>
 
     <div class="col-md-6">
         <div  ng-repeat="key in arrayKey ">
-            <div  class="col-xs-6 box keyBox word" ng-click="getWord($event, key)">{{key}}  </div>
+            <div  class="col-xs-6 box keyBox word" ng-click="getWord($event, key)">{{key}}</div>
         </div>
     </div>
     <div class="col-md-6">
         <div ng-repeat="val in arrayValue ">
-            <div  class="col-xs-6 box valueBox word" ng-click="getWord($event, val)">{{val}}</div>
+            <div  class="col-xs-6 box box2 valueBox word" ng-click="getWord($event, val)">{{val}}</div>
         </div>
     </div>
-    <h3>Zdobyte punkty: {{trueAnswers}} / 1500 PKT</h3>
 </div>

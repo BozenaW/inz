@@ -1,9 +1,13 @@
-app.controller('met1Ctrl', function ($scope, $http, $timeout) {
+app.controller('met1Ctrl', function ($scope, $http, $timeout, $location) {
     $scope.arrayKey = [];
 
-    $http.get('/api/met1').then(function (data) {
+   var x = $location.search();
+   $scope.catTitle = x.tit;
+
+    $http.post('/api/met1', {tes : $scope.catTitle}).then(function (data) {
+
         $scope.words = data.data.words;
-        console.log('****', $scope.words);
+console.log($scope.words);
         $scope.myRandom();
     });
 
@@ -26,23 +30,26 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
 
         if(count === 1 ){
             prev = elem;
-            prev.target.classList.add('xxx');
+            prev.target.classList.add('selected');
         }
 
         if(count === 2){
             if($scope.key !== '' && $scope.value !== ''){
+
                 if($scope.words[$scope.key].trans === $scope.value ){
+
                     console.log('ok');
                     $scope.trueAnswers +=250;
-                    elem.target.classList.add('xxx');
+                    elem.target.classList.add('selected');
                     // $timeout(function ()
                     // {
-                        elem.target.classList.add('hid');
-                        prev.target.classList.add('hid');
+                        elem.target.classList.add('myHidden');
+                        prev.target.classList.add('myHidden');
                     // },1000);
                 }
 
                 else{
+                    prev.target.classList.remove('selected');
                     $scope.trueAnswers-=100;
                     console.log('nieok');
                     elem.target.classList.add('red');
@@ -66,18 +73,12 @@ app.controller('met1Ctrl', function ($scope, $http, $timeout) {
     $scope.arrayValue=[];
 
 
-        $scope.myRandom = function ()
-        {
-            for(var key in $scope.words){
-                $scope.arrayKey.push(key);
-                $scope.arrayValue.push($scope.words[key].trans);
-            }
-
-            $scope.arrayKey.sort();
-            console.log($scope.arrayKey);
-            console.log($scope.arrayValue);
-
-            //console.log($scope.array[0])
-
-        };
+    $scope.myRandom = function ()
+    {
+        for(var key in $scope.words){
+            $scope.arrayKey.push(key);
+            $scope.arrayValue.push($scope.words[key].trans);
+        }
+        $scope.arrayKey.sort();
+    };
 });

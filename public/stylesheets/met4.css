@@ -1,0 +1,45 @@
+table, th, td {
+    border-collapse: collapse;
+    padding: 17px;
+    font-size:22px;
+    text-align: center;
+    box-shadow: inset 150px 150px 150px 150px rgba(226, 226, 223, 0.5);
+    border:3px solid #bc1237;
+
+    }
+
+th{
+text-transform: uppercase;
+}
+
+td{
+    font-weight: 300;
+}
+
+table{
+    margin-top: 150px;
+}
+
+.navbar{
+    background-color: #1a1f27;
+    border:none!important;
+}
+
+body{
+    background: url('../images/grey.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button{
+    margin: 5px;
+    padding: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:15px;
+    background-color: #f9f9f9;
+    color: darkred;
+    font-weight: bold;
+width: 85px;
+    /*border: 2px solid darkred;*/
+    /*text-transform: uppercase;*/
+}

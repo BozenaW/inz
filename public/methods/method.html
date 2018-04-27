@@ -25,9 +25,9 @@
     </nav>
 <div class="content" ng-controller="categoryCtrl" >
 
-    <div ng-init="load()" class="caption" >
+    <div ng-init="chooseCat()" class="caption" >
 
-        <h1>{{x}}</h1>
+        <h1></h1>
 
     </div>
     <div class="tlo" ></div>
@@ -59,8 +59,8 @@
             </li>
 
             <li class="likes" ng-click='makeActive($event, "four")' ng-class="{ 'active': active=='four'}">
-                <div class="icon fa fa-volume-up fa-4x"></div>
-                <span class="myText">Słuchaj i pisz</span>
+                <div class="icon fa fa-book fa-4x"></div>
+                <span class="myText">Słownik</span>
                 <div ng-show="myVar4">
                     <button ng-click="method4()" class="butt">GO!</button>
                 </div>

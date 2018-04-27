@@ -16,6 +16,7 @@ app.controller('loginCtrl', function ($scope, MyService, $location, $rootScope, 
             }
             else{
                 console.log('wrong data');
+                console.log($scope.status.status);
             }
         }, 2500);
     };

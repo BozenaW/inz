@@ -1,10 +1,14 @@
 body
 {
 
-    color: lightgray;
+    color: #272e38;
     font-size: 28px;
-    font-family: 'Inconsolata';
     font-weight: 700;
+    background: url('../images/zz.jpg');
+    background-repeat: no-repeat;
+    background-size:cover  ;
+
+
 }
 
 #box
@@ -17,11 +21,13 @@ body
 #board
 {
     width: 900px;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
     text-align: center;
-    font-size: 48px;
+    font-size: 60px;
     min-height: 60px;
+    font-family: 'Joti One', cursive;
+
 }
 
 #gibbet
@@ -47,31 +53,87 @@ body
     text-align:center;
     padding: 5px;
     margin: 5px;
-    border: 3px solid gray;
+    border: 2px solid white;
     float: left;
     cursor: pointer;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 22px;
+    color:white;
+    font-family: 'Joti One', cursive;
 }
 
 .letter:hover
 {
     background-color: #222222;
-    color: white;
-    border: 3px solid white;
+    color: yellow;
+    border: 3px solid yellow;
 }
 
 .reset
 {
-    color:green;
+    position:absolute;
+   bottom: 3%;
+    right: 20%;
+    color:black;
     cursor: pointer;
     font-size: 48px;
+    font-family: 'Joti One', cursive;
 }
 
 .reset:hover
 {
-    color:white;
+    color:#00C000;
+}
+
+.navbar{
+    background-color: #1a1f27;
+    border:none!important;
+}
+
+
+
+.nav li a{
+    color: white!important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nav li a:hover{
+    color:lightgray!important;
+}
+
+
+#def{
+    font-family: 'Sacramento', cursive!important;
+    font-size: 30px;
+    color: darkred;
+
+}
+
+#fontSize{
+    /*text-align: right;*/
+    color: black;
+font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+#mainBox{
+   display:flex;
+    justify-content: center;
+    /*height: 370px;*/
+    padding-top:30px;
+    padding-bottom: 30px;
+    background-color: #0f0f0f;
+    border: 5px dashed white;
+    /*position: absolute;*/
+    /*top:35%;*/
+
+}
+
+#myPosi{
+    margin:200px;
+    color:yellow;
 }

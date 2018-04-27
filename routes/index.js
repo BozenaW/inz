@@ -9,7 +9,7 @@ var router = express.Router();
 //req.session.Zmienna = null;
 
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords', ['WordsCollection']);
+var db = mongojs('mongodb://bozena:bozena6@ds113936.mlab.com:13936/englishwords', ['WordsCollection', 'users']);
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -107,37 +107,54 @@ router.post('/api/register', function (req, res) {
 });
 
 router.get('/api/category', function (req,res) {
-  db.WordsCollection.find(function (err, docs) {
-    console.log(docs);
-    res.json(docs);
-  })
+  db.WordsCollection.findOne(function (err, docs) {
+//     //
+//       var cursor = db.WordsCollection.find({title: 'Computer Networks'});
+//     cursor.each(function (err,doc) {
+//       console.log('**************');
+
+      res.json(docs);
+    });
+//     docs.find({title:"Computer Networks"});
+//     console.log('*****************************************************');
 });
 
 
-router.get('/api/met1', function (req, res) {
-  db.word.findOne(function (err, docs){
-    console.log(docs);
+router.post('/api/met1', function (req, res) {
+
+  db.WordsCollection.findOne({title: req.body.tes}, function (err, docs){
+
     res.json(docs);
   });
 });
 
-router.get('/api/met2', function (req, res) {
+router.post('/api/met2', function (req, res) {
   req.session.test = {name:'test'};
-    db.word.findOne(function (err, docs) {
+
+  db.WordsCollection.findOne({title: req.body.tes}, function (err, docs) {
         res.json(docs);
     })
 });
 
-router.get('/api/met3', function (req, res) {
+router.post('/api/met3', function (req, res) {
   console.log(req.session);
-  db.word.findOne(function (err, docs) {
+  db.WordsCollection.findOne({title: req.body.tes}, function (err, docs) {
     console.log(docs);
     res.json(docs);
   })
 });
 
-router.get('/api/met5', function (req, res) {
-  db.word.findOne(function (err, docs) {
+router.post('/api/met4', function (req, res) {
+    console.log(req.session);
+    db.WordsCollection.findOne({title: req.body.tes}, function (err, docs) {
+        console.log(docs);
+        res.json(docs);
+    })
+});
+
+
+router.post('/api/met5', function (req, res) {
+  db.WordsCollection.findOne({title: req.body.tes}, function (err, docs) {
     console.log(docs);
     res.json(docs);
   })

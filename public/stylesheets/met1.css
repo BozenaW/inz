@@ -1,11 +1,22 @@
+body{
+    background: url('../images/grey.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+
+}
+
 .box{
-    width:40%;
     height: 70px;
-    background-color: #006666;
+    background-color: #28965c;
     margin:20px;
 }
 
-.hid{
+.box2{
+    background-color: #1e7a96;
+}
+
+.myHidden{
     transition-duration: 1s;
     filter:blur(15px);
     background: grey!important;
@@ -16,12 +27,32 @@
 
 }
 
+.navbar{
+    background-color: #1a1f27;
+    border:none!important;
+}
+
+.selected{
+    background-color: #abb07b;
+}
+
+
 .col-xs-6{
+
     width:90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 30px;
+    border-radius: 5px;
+    border: 3px dashed lightgray;
+}
+.margin{
+    margin: 50px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size:40px;
+    font-weight: bold;
+    color: #333333;
 }
 
 .col-xs-6:hover{
@@ -32,11 +63,7 @@
 
 .word{
     color: whitesmoke;
-    font-size: 30px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-.xxx{
-    background-color: #009696;
 }
